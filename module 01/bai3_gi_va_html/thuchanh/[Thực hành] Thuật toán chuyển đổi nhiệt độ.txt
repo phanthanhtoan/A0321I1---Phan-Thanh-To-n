@@ -1,0 +1,5 @@
+Begin
+    Input C
+    F = (9C)5 + 32
+    Display F
+End
