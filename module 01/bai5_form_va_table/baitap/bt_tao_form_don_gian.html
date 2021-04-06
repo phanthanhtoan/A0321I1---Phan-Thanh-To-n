@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo form đơn giản</title>
+</head>
+<body>
+    <form style="background: white; color: white">
+        <h1 style="background-color: darkorange" > Sở thích của bạn </h1>
+        <label  style="color: royalblue" for="yourname" >Họ và tên:</label>
+        <input type="text" id="yourname" value=""><br><br>
+        <label style="color: royalblue" for="email">Email: &emsp;  </label>
+        <input type="text" id="email"><br><br>
+        <label style="color: royalblue" for="hobby">Sở thích:</label>
+        <table></table>
+            <tr>
+                <td><input type="checkbox" id="hobby" "><b style="color: darkorange">Thể thao</b>&emsp;</td>
+                <td><input type="checkbox" id="hobby" "><b style="color: darkorange">Âm nhạc</b></td>
+                <td><input type="checkbox" id="hobby"><b style="color: darkorange">Đọc sách</b><br></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="hobby"><b style="color: darkorange">Lướt web</b></td>
+                <td><input type="checkbox" id="hobby"><b style="color: darkorange">Chơi game</b></td>
+                <td> <input type="checkbox" id="hobby" ><b style="color: darkorange">Điện ảnh</b>&emsp;<br></td>
+            </tr>
+                <input type="checkbox" id="hobby"><b style="color: darkorange">Du lịch</b><br>
+        </table>
+        <label for="submit"></label>
+        <input type="submit" id="submit" value="Gửi thông tin"">&emsp;
+        <input type="reset" value="Nhập lại">
+    </form>
+
+    <form style="background: khaki">
+        <h1 style="background-color:darkturquoise; color: royalblue" >ĐĂNG KÍ HỌC VIÊN</h1>
+        <label style="color: darkorange" for="hovaten">Họ và tên:</label>
+        <input type="text" id="hovaten"><br><br>
+        <label style="color: darkorange" for="ngaysinh">Ngày sinh:</label>
+        <input type="text" id="ngaysinh"><br><br>
+        <label style="color: darkorange" for="gioitinh">Giới tính:</label>
+        <input type="radio" id="gioitinh">Nam
+        <input type="radio" id="gioitinh">Nữ<br><br>
+        <label   style="color: darkorange" for="diachi">Địa chỉ:</label>
+        <input type="text" id="diachi" style="height: 50px"><br><br>
+        <label  style="color: darkorange" for="lop">Lớp:</label>
+        <select >
+            <option value="" id="lop" >--Chọn lớp--</option>
+        </select><br><br>
+        <label style="color: darkorange" for="email2">Email:</label>
+        <input type="text" id="email2"><br><br>
+        <label  style="color: darkorange" for="dienthoai">Điện thoại:</label>
+        <input type="tel" id="dienthoai"><br><br>
+        <input type="submit" value="Đăng kí">
+        <input type="reset" value="Nhập lại">
+    </form>
+</body>
+</html>
