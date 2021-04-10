@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi tiền tệ</title>
+</head>
+<body>
+<center>
+    <form>
+        <table>
+            <tr>
+                <th>Amout</th>
+                <th>Form Currenry</th>
+                <th>To Currenry</th>
+            </tr>
+            <tr>
+                <th>
+                    <input  id="nhaptien" type="number" placeholder="Nhập số tiền cần chuyển"  >
+                </th>
+                <th>
+                    <select id="from">
+                        <option value="vn">Việt Nam</option>
+                        <option value="usd">USD</option>
+                    </select>
+                </th>
+                <th>
+                    <select id="to">
+                        <option value="usd">USD</option>
+                        <option value="vn">Việt Nam</option>
+                    </select>
+                </th>
+                <th><button type="button" id="convert" onclick="aaa()" style="background-color: #d61b06">Convert</button></th>
+            </tr>
+        </table>
+        <p id="result" style="color: blue">Result:</p>
+    </form>
+</center>
+    <script>
+       function aaa() {
+            let a = document.getElementById("nhaptien").value;
+            let From = document.getElementById("from").value;
+            let To = document.getElementById("to").value;
+            let convert;
+            if(From ==="vn" && To ==="usd"){
+                 convert = a/23000;
+                 document.getElementById("result").innerHTML="Result:"+convert+" USD";
+            }
+             else if (From === "usd" && To ==="vn") {
+                 convert = a*23000;
+                 document.getElementById("result").innerHTML="Result:"+convert+" VNĐ";
+                <!-- Đây là chú thích -->
+             }
+             else {
+                 alert("Bạn đã chọn sai phương thức ^_^");
+            }
+        }
+    </script>
+</body>
+</html>
