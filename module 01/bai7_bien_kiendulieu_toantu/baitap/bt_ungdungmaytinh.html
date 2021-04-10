@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form>
+        <input type="number" id="o1">
+        <input type="number" id="o2"><br/><br>
+        <button type="button" id="addition"  onclick="add()">Addition(+)</button>
+        <button type="button" id="subtraction" onclick="sub()">Subtraction(-)</button>
+        <button type="button" id="multiplication" onclick="multi()">Multiplication(x)</button>
+        <button type="button" id="division" onclick="divi()">Division(/)</button><br/>
+
+        <p id="result" style="color: blue">Result:</p>
+    </form>
+<script>
+
+    function add() {
+        let a = parseInt(document.getElementById("o1").value);
+        let b = parseInt(document.getElementById("o2").value);
+        let cong;
+        cong = a+b ;
+        document.getElementById("result").innerHTML="Result:"+cong;
+    }
+    function sub() {
+        let a = parseInt(document.getElementById("o1").value);
+        let b = parseInt(document.getElementById("o2").value);
+        let tru;
+        tru = a-b;
+        document.getElementById("result").innerHTML="Result:"+tru;
+    }
+    function multi() {
+        let  a = parseInt(document.getElementById("o1").value);
+        let b = parseInt(document.getElementById("o2").value);
+        let nhan;
+        nhan = a*b;
+        document.getElementById("result").innerHTML="Result:"+nhan;
+    }
+    function divi() {
+        let  a = parseInt(document.getElementById("o1").value);
+        let b = parseInt(document.getElementById("o2").value);
+        let chia;
+        chia = a/b;
+        document.getElementById("result").innerHTML="Result:"+chia;
+    }
+
+</script>
+</body>
+</html>
