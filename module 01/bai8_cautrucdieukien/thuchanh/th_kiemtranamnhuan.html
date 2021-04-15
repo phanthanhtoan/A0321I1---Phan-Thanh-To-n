@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra năm nhuận</title>
+</head>
+<body>
+    <script>
+        var year = parseInt(prompt("Enter a year"));
+        var isLeapYear = false;
+        var isDivisivleby4 = year % 4== 0;
+
+        if(isDivisivleby4){
+            var isDivisivleby100 = year%100 ==0;
+            if (isDivisivleby100){
+                var isDivisivleby400 = year % 400==0;
+                if(isDivisivleby400){
+                    isLeapYear=true;
+                }
+            }else {
+                isLeapYear =true;
+            }
+        }
+        if (isLeapYear){
+            alert(year+"Năm nhuận");
+        }else {
+            alert(year+"Năm không nhuận");
+        }
+    </script>
+</body>
+</html>
