@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let cannang = parseInt(prompt("Can nang:"));
+        let chieucao = parseInt(prompt("Chieu cao:"));
+        let bmi = cannang/ (chieucao^2);
+        document.write("BMI ="+bmi);
+        document.write('<br/>');
+        if (bmi <18){
+            document.write("<b>Underweight</b>");
+        }else if (bmi< 25){
+            document.write("<b>Normal</b>");
+        }else if (bmi<30){
+            document.write("<b>Overweight</b>");
+        }else{
+            document.write("<b>Obese</b>");
+        };
+    </script>
+</body>
+</html>
