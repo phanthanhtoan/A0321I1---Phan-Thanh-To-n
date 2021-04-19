@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        //bai1
+        let a = parseInt(prompt("Nhập a:"));
+        let b = parseInt(prompt("Nhập b:"));
+        if (a%b==0){
+            alert("A chia hết cho b");
+        }else {
+            alert("A không chia hết cho b");
+        }
+    </script>
+    <script>
+        //bai2
+        let tuoi = parseInt(prompt("Nhập tuổi:"));
+        if (tuoi>40){
+            alert("Đậu lớp 10");
+        }else {
+            alert("Tạch");
+        }
+    </script>
+    <script>
+        //bai3
+        let a = parseInt(prompt("Nhập a:"));
+        if (a>0){
+            alert("Lớn hơn 0");
+        }
+        else{
+            alert("Nhỏ hơn 0");
+        }
+    </script>
+    <script>
+        //bai4
+        let a = parseInt(prompt("Số thứ nhất:"));
+        let b = parseInt(prompt("Số thứ hai:"));
+        let c = parseInt(prompt("Số thứ ba:"));
+        if ( a>b && a>c){
+            alert("A là số lớn nhất");
+        }else if ( b> c ){
+            alert("B là số lớn nhất");
+        }else{
+            alert("C là số lớn nhất");
+        }
+    </script>
+    <script>
+        //bai5
+        let a = parseInt(prompt("Điểm bài kiểm tra:"));
+        let b = parseInt(prompt("Điểm giữa kì:"));
+        let c = parseInt(prompt("Điểm thi:"));
+        let tb = (a+ b*2 +c*3)/3;
+        if(tb>=8){
+            alert("Học lực giỏi");
+        }else if(tb>6.5 && tb <8) {
+            alert("Học lực khá");
+        }else {
+            alert("Học dốt");
+        }
+    </script>
+    <script>
+        //bai6
+        let a = parseInt(prompt("Nhập số tiền :"));
+        let b ;
+        if (a>200000){
+            b = a*0,1;
+            alert("Lãi là 10%"+b);
+        }else {
+            b = a*0.05;
+            alert("Lãi là 5% và tiền hoa hồng = "+b);
+        }
+    </script>
+    <script>
+        //bai7
+        //phí thêu bao là 1000đ nếu điện dưới 1p
+        //phí thêu bao là 700đ nếu điện hơi 5p
+        //phí thuê bao là 500đ nếu điện hơn 10p
+        let sophut= parseInt(prompt("Số phút đã sử dụng:"));
+        let phi;
+        if (sophut>10){
+            phi=sophut*500;
+            alert("Bạn đã gọi:"+phi);
+        }else if (sophut>5){
+            phi=sophut*700;
+            alert("Bạn đã gọi:"+phi);
+        }else {
+            if (sophut<1) {
+                phi = sophut * 1000;
+                alert("Bạn đã gọi:" + phi);
+            }
+        }
+
+    </script>
+</body>
+</html>

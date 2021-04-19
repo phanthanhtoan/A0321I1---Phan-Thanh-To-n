@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <input type="text" id="nhapso" style="width: 205px; height: 20px">
+    <br/>
+    <button value="1" style="width: 50px; height: 50px; color: blue" onclick="so1();" ><font size="4">1</font></button>
+    <button style="width: 50px; height: 50px; color: blue" onclick="so2();" ><font size="4">2</font></button>
+    <button style="width: 50px; height: 50px; color: blue" onclick="so3();" ><font size="4">3</font></button>
+    <button style="width: 50px; height: 50px;  color: blue" onclick="cong();"><font size="4">+</font></button>
+    <br/>
+    <button style="width: 50px; height: 50px;  color: blue" onclick="so4();"><font size="4">4</font></button>
+    <button style="width: 50px; height: 50px;  color: blue" onclick="so5();"><font size="4">5</font></button>
+    <button style="width: 50px; height: 50px;  color: blue" onclick="so6();"><font size="4">6</font></button>
+    <button style="width: 50px; height: 50px;  color: blue" onclick="tru();"><font size="4">-</font></button>
+    <br/>
+    <button style="width: 50px; height: 50px;  color: blue" onclick="so7();"><font size="4">7</font></button>
+    <button style="width: 50px; height: 50px;  color: blue" onclick="so8();"><font size="4">8</font></button>
+    <button style="width: 50px; height: 50px;  color: blue" onclick="so9();"><font size="4">9</font></button>
+    <button style="width: 50px; height: 50px; color: blue" onclick="nhan();"><font size="4">x</font></button>
+    <br/>
+<!--    <input type="button" value="C" id="xoa" onclick="xoa();">-->
+    <button type="reset" style="width: 50px; height: 50px;  color: blue" onclick="xoa();"><font size="4">C</font></button>
+    <button style="width: 50px; height: 50px;  color: blue" onclick="so0();"><font size="4">0</font></button>
+    <button style="width: 50px; height: 50px; color: blue" onclick="bang();"><font size="4">=</font></button>
+    <button  style="width: 50px; height: 50px;  color: blue" onclick="chia();"><font size="4">/</font></button>
+
+<script>
+
+    function so1() {
+        nhapso.value += 1;
+    }
+    function so2() {
+        nhapso.value += 2;
+    }
+    function so3() {
+        nhapso.value += 3;
+    }
+    function so4() {
+        nhapso.value += 4;
+    }
+    function so5() {
+        nhapso.value += 5;
+    }
+    function so6() {
+        nhapso.value += 6;
+    }
+    function so7() {
+        nhapso.value += 7;
+    }
+    function so8() {
+        nhapso.value += 8;
+    }
+    function so9() {
+        nhapso.value += 9;
+    }
+    function so0() {
+        nhapso.value += 0;
+    }
+    function cong() {
+        nhapso.value += "+";
+    }
+    function tru() {
+        nhapso.value += "-";
+    }
+    function nhan() {
+        nhapso.value += "*";
+    }
+    function chia() {
+        nhapso.value += "/";
+    }
+    function bang() {
+        alert(eval(document.getElementById("nhapso").value));
+    }
+    function xoa() {
+        document.getElementById("nhapso").value=null;
+    }
+
+</script>
+</body>
+</html>
