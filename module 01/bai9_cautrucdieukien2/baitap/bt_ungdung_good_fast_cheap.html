@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        input {
+            width: 30px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+<form>
+    <fieldset style="width: 200px; background-color: yellow" >
+        <label for="so1" class="status1">
+            <input id="so1" type="checkbox"  onchange="fast()"> Fast <br>
+        </label>
+        <label for="so2" class="status2">
+            <input id="so2" type="checkbox"   onchange="good()"> Good <br>
+        </label>
+        <label for="so3" class="status3">
+            <input id="so3" type="checkbox"  onchange="cheap()"> Cheap <br>
+        </label>
+    </fieldset>
+</form>
+<script>
+    let so1 = document.getElementById("so1");
+    let so2 = document.getElementById("so2");
+    let so3 = document.getElementById("so3");
+
+    function fast() {
+        if (so1.checked === true && so2.checked === true) {
+            so3.checked = false;
+        }
+    }
+    function good() {
+        if (so2.checked === true && so3.checked === true) {
+            so1.checked = false;
+        }
+    }
+    function cheap() {
+        if (so1.checked === true && so3.checked === true) {
+            so2.checked = false;
+        }
+    }
+</script>
+</body>
+</html>
