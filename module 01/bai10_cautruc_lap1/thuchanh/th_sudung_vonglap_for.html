@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--    bai 1-->
+    <h2>JavaScript Loops</h2>
+    <p id="demo"></p>
+    <script>
+        let text = "";
+        let i;
+        for (i = 0; i < 5; i++) {
+            text += "The number is " + i + "<br>";
+        }
+        document.getElementById("demo").innerHTML = text;
+    </script>
+<hr>
+    <script>
+        //bai2 Viết chương trình nhập vào một số bất kỳ lớn hơn 0. Tính tổng các phần tử từ 1 đến số vừa nhập vào.
+        let number = parseInt(prompt("Số cần nhập :"));
+        var sum = 0;
+        var sohang = 0;
+        for (let i = 1; i <= number; i+=1) {
+           sohang = parseInt(prompt("Nhập số hạng thứ " + i + ":"));
+            sum += sohang;
+        }
+        alert( "tổng của " + number + " số là: " + sum);
+</script>
+</body>
+</html>
