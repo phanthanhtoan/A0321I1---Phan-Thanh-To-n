@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        //bài  1 In dãy Finonaci
+        let number = parseInt(prompt("Nhập số các số fibonacci cần in: "));
+        let a1 = 0;
+        let a2 = 1;
+        let a = 1;
+        for (let i=0;i<number;i++) {
+            document.write(a);
+            document.write("<br>");
+            a = a1+a2;
+            a1 = a2;
+            a2 =a;
+        }
+    </script>
+<script>
+    //bài 2 Tính giai thừa của một số nguyên dương
+    let number = parseInt(prompt("Số cần tính giai thừa: "));
+    let giaithua = 1;
+    for (let i=1;i<=number;i++) {
+        giaithua *= i;
+    }
+    alert("kết quả là : " + giaithua)
+</script>
+<script>
+    //bài 3 in ra tam giác vuông
+    for (let i=1;i<=5;i++) {
+        for (let j = 1; j <= i; j++) {
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+    for (let a= 1; a<=3;a++){
+        document.write("<br>");
+    }
+//
+    for (i=5;i>=1;i--) {
+        for (j = 1; j <= i; j++) {
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+    for (let a= 1; a<=3;a++){
+        document.write("<br>");
+    }
+//
+    for (let i=1; i<=5; i++){
+        for (let j=1; j<=(5-i); j++){
+            document.write("&ensp;");
+        }
+        for (let  j=1; j<=i; j++) {
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+    document.write("<br>");
+    //
+    for (i=5;i>=1;i--) {
+        for (j = 1; j <=(5 - i); j++) {
+            document.write("&ensp;");
+        }
+        for (j = 1; j <= i; j++) {
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+</script>
+<script>
+    //bài 4 in hình chữ nhật
+    for(let i=1; i<=20; i++){
+        document.write("* ");
+    }
+    document.write("<br>");
+    for(let j=1; j<=5; j++){
+        document.write(" *"  );
+        for (i= 1; i <= 27; i++) {
+            document.write("&ensp;");
+        }
+        document.write("*");
+        document.write("<br>");
+    }
+    for(let i=1; i<=20; i++){
+        document.write("* ");
+    }
+</script>
+<script>
+    //bài 5 lãi ngân hàng
+    let tienBanDau = parseFloat(prompt("Nhập số tiền số tiền ban đầu: "));
+    let thang = parseFloat(prompt("Nhập số tháng cho vay: "));
+    let laiHangThang = parseFloat(prompt("Nhập lãi hàng tháng: "));
+    let tongSoTienLai=0;
+    for (let i=0; i<thang;i++) {
+        tongSoTienLai += (tienBanDau+tongSoTienLai) * laiHangThang;
+    }
+    alert(tongSoTienLai)
+</script>
+<script>
+    //bài 6 hình trái tim
+    //
+    for (let i=1; i<=2; i++){
+        document.write("&ensp;");
+        document.write("&ensp;");
+        document.write("*");
+        document.write("*");
+    }
+    document.write("<br>");
+    for (i=1;i<=10;i++) {
+        document.write("*");
+    }
+    document.write("<br>");
+    document.write("&ensp;");
+    for (i=1;i<=8;i++) {
+        document.write("*");
+    }
+    document.write("<br>");
+    document.write("&ensp;");
+    document.write("&ensp;");
+    for (i=1;i<=6;i++) {
+        document.write("*");
+    }
+    document.write("<br>");
+    document.write("&ensp;");
+    document.write("&ensp;");
+    document.write("&ensp;");
+    for (i=1;i<=4;i++) {
+        document.write("*");
+    }
+    document.write("<br>");
+    document.write("&ensp;");
+    document.write("&ensp;");
+    document.write("&ensp;");
+    document.write("&ensp;");
+    document.write("**");
+</script>
+</body>
+</html>

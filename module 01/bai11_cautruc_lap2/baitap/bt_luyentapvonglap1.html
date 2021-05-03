@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //bài 1 Sử dụng vòng lặp để đếm từ 1 đến 100. Khi số là 99, hiển thị hộp thoại thông báo là đã hoàn thành
+    for (let i =1; i<=100; i++){
+        if (i == 99){
+            document.write("Đã hoàn thành "+i);
+        }
+    }
+</script>
+<script>
+    //bài 2
+    let a = parseInt(prompt("Nhiệt độ hiện tại"));
+    if(a > 100){
+        alert("Giảm nhiệt độ");
+    }else if (a<20) {
+        alert("Tăng nhiệt độ");
+    }
+</script>
+<script>
+    //bài 3 in ra dãy fibonacci
+    let a1 = 0;
+    let a2  =1;
+    let a =1 ;
+    for (let i=1; i<=20; i++){
+        document.write(a +" ");
+        a = a1+a2;
+        a1 = a2;
+        a2 =a;
+    }
+</script>
+<script>
+    //bài 4 in ra số fibonacci chia hết 5
+    let a1 = 0;
+    let a2 = 1;
+    let a = 1;
+    for (let i = 1; i <= 20; i++) {
+        //document.write(a +" ");
+        a = a1 + a2;
+        a1 = a2;
+        a2 = a;
+        if (a % 5 == 0) {
+            document.write("Số đầu tiên chia hết cho 5 là " + a);
+            break;
+        }
+    }
+</script>
+<script>
+    //bài 5 in ra số fibonacci chia hết 5
+    let a1 = 0;
+    let a2 = 1;
+    let a = 1;
+    let tong  =0;
+    for (let i = 1; i <= 20; i++) {
+        tong +=a;
+        a = a1 + a2;
+        a1 = a2;
+        a2 = a;
+    }
+    document.write(tong);
+</script>
+<script>
+    //bài 6 tổng của 30 số đầu tiên chia hết cho 7
+    debugger
+    let sum =0;
+    let a = 0;
+    for (let i= 1;  i<=30; a++) {
+        if (a % 7 == 0) {
+            sum += a;
+            i++;
+        }
+    }
+     document.write("Tổng 30 số đầu tiên chia hết cho 7 là :" +sum + "<br>");
+</script>
+<script>
+    //bài 7 n ra các số từ 1 đến 100 Nhưng nếu số chia hết cho 3 thì in ra "Fizz", 5 thì in ra "Buzz" thay vì in ra số đó. Và nếu số đó chia hết cho cả 3 và 5 thì in ra chữ "FizzBuzz".
+    for (i=1;i<=100;i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+            document.write("FizzBuzz");
+            document.write("<br>");
+        } else if (i%5 === 0) {
+            document.write("Buzz");
+            document.write("<br>");
+        } else if (i%3 === 0) {
+            document.write("Fizz");
+            document.write("<br>");
+        } else {
+            document.write(i);
+            document.write("<br>");
+        }
+    }
+</script>
+<!--    bai8-->
+    <button type="button" onclick="batdau()" > Bắt đầu </button>
+<script>
+    function batdau() {
+        let nhap = parseInt(prompt("bạn muốn bắt đầu đoán trong khoảng từ :"));
+        let den = parseInt(prompt("đến :"));
+        var soDoan = parseInt(prompt("nhập giá trị bạn muốn đoán :"));
+        let random = Math.floor(Math.random() * (den - nhap) + nhap);
+        let j = 1;
+        let i = 0;
+        while (i<1) {
+            if (random === soDoan){
+                alert("Bạn đã đoán đúng");
+                i++;
+            } else {
+                soDoan = parseInt(prompt("nhập lại giá trị bạn muốn đoán :"));
+                j++;
+            }if (j === 3 ) {
+                alert("bạn đã thua");
+                i++;
+            }
+        }
+    }
+</script>
+</body>
+</html>
