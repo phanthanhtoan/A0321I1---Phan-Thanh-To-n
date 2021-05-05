@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //bai1
+    let myColor = ["Red", "Green", "White", "Black"];
+    document.write(myColor.toString())
+</script>
+<script>
+    //bai2
+    let num = window.prompt("Nhập vào 1 số có nhiều chữ số: ");
+    let str = num.toString();
+    let result = [str[0]];
+
+    for (let x = 1; x < str.length; x++) {
+        if ((str[x - 1] % 2 === 0) && (str[x] % 2 === 0)) {
+            result.push('-', str[x]);
+        }
+        else {
+            result.push(str[x]);
+        }
+    }
+    document.write(result.join(""));
+</script>
+<script>
+    //bài 3
+    let str = prompt("nhập vào 1 chuỗi: ");
+    let chuHoa = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let chuThuong = 'abcdefghijklmnopqrstuvwxyz';
+    let result = [];
+
+    for(let x=0; x<str.length; x++) {
+        if(chuHoa.includes(str[x]))
+        {
+            result.push(str[x].toLowerCase());
+        }
+        else if(chuThuong.includes(str[x]))
+        {
+            result.push(str[x].toUpperCase());
+        }
+        else
+        {
+            result.push(str[x]);
+        }
+    }
+    document.write(result.join(''));
+</script>
+</body>
+</html>

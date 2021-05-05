@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let nhap = prompt("Nhập vào từ cần dịch");
+    let eng = ["i", "want", "to", "school"];
+    let vie = ["tôi", "muốn", "đến", "trường học"];
+    for (let i = 0; i < eng.length; i++) {
+        if (nhap === eng[i]) {
+            alert(vie[i]);
+        } else if (i === (eng.length - 1)) {
+            alert("Nhập lại");
+        }
+    }
+</script>
+</body>
+</html>
