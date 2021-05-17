@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //bài 1  Tạo hàm alertMessage() hiển thị hộp thoại chứa chuỗi  "Xin chao". Gọi hàm từ trong phần <body> của trang web.
+    function alertMessage() {
+        hello = alert("Xin chào");
+        return hello;
+    }
+    alertMessage();
+</script>-->
+<script>
+    //bài 2 Tạo hàm nhận vào một đối số dạng số, tăng giá trị đối số đó lên 1 và trả lại giá trị cho lời gọi hàm. Gọi hàm từ trong phần <body> của trang web và hiển thị kết quả lên màn hình.
+    function logarithm(number) {
+        number += 1;
+        return number;
+    }
+    document.write(logarithm(100))
+</script>
+<script>
+    //bài 3 Tạo hàm nhận vào hai tham số. Nếu giá trị của tham số thứ nhất lớn hơn tham số thứ hai, hiển thị hộp thoại thông báo cho người dùng. Nếu giá trị của tham số thứ nhất nhỏ hơn hoặc bằng tham số thứ hai, trả về tổng của hai tham số.
+    function test(number1,number2) {
+        if (number1 > number2) {
+            alert("Số thứ nhất lớn hơn ");
+        }else {
+            return alert(number1 + number2);
+        }
+    }
+
+    var a = parseInt(prompt("Nhâp số thứ 1 "));
+    var b = parseInt(prompt("Nhập số thứ 2 "));
+    test(a,b);
+</script>
+<script>
+    //bài 4
+    function addNumbers() {
+        firstNum = 4;
+        secondNum = 8;
+        result = firstNum + secondNum;
+        return result;
+    }
+    result = 0;
+    alert("Trước " +result);
+    result = addNumbers();
+    alert("Sau "+result);
+</script>
+<script>
+    //bai 5
+    let array1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let array2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+    function check(char) {
+        for (let i=0; i<array1.length; i++){
+            if (array1[i]==char){
+                return array2[i];
+            }else if(i==array1.length-1){
+                return  alert("Không tìm thấy ngôi sao nào");
+            }
+        }
+    }
+    let name = prompt("Nhập tên ngôi sao cần tìm: ");
+    value =check(name);
+    alert(value);
+</script>
+</body>
+</html>

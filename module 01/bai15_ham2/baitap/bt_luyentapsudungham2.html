@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<script>-->
+<!--    //bài1 Viết hàm tính bình phương của một số bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.-->
+<!--    function binhphuong(number) {-->
+<!--        return number*number;-->
+<!--    }-->
+<!--    let a = prompt("Nhập :");-->
+<!--    alert(binhphuong(a));-->
+<!--</script>-->
+<!--<script>-->
+<!--    //bài 2  Viết hàm tính diện tích, hàm tính chu vi hình tròn. Gọi hàm vừa xây dựng được-->
+<!--    //let pi = 3.14;-->
+<!--    function dientich(r) {-->
+<!--        return Math.PI*r*r;-->
+<!--    }-->
+<!--    function  chuvi(r) {-->
+<!--        return Math.PI*r*2;-->
+<!--    }-->
+<!--    let r= parseFloat(prompt("Nhập bán kính : "));-->
+<!--    document.write("Diện tích hình tròn: "+dientich(r)+"<br/>");-->
+<!--    document.write("Chu vi hình tròn: "+chuvi(r));-->
+<!--</script>-->
+<!--<script>-->
+<!--    //bài 3 Viết hàm tính giai thừa của một số nguyên bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.-->
+<!--    function giaithua(number) {-->
+<!--        let a=1;-->
+<!--        for (let i=1; i<=number; i++){-->
+<!--            a *= i;-->
+<!--        }-->
+<!--        return a;-->
+<!--    }-->
+<!--    let number =parseInt(prompt("Nhập số nguyên: "));-->
+<!--    alert("Kết quả ="+giaithua(number));-->
+<!--</script>-->
+<!--<script>-->
+<!--    //bài 4 Viết hàm kiểm tra xem ký tự nhập vào có phải là ký tự số không. Nếu là ký tự số hàm trả về true, ngược lại trả về false.-->
+<!--    function kiemtrakituso(kiemtra) {-->
+<!--        return !isNaN(kiemtra);-->
+<!--    }-->
+<!--    let kiemtra = prompt("Nhập ký tự cần kiểm tra:");-->
+<!--    alert(kiemtrakituso(kiemtra));-->
+<!--</script>-->
+<!--<script>-->
+<!--    //bài 5  Viết hàm nhận vào 3 số nguyên bất kỳ, trả về số nguyên có giá trị nhỏ nhất.-->
+<!--    let a = parseInt(prompt("Nhập số nguyên thứ nhất: "));-->
+<!--    let b = parseInt(prompt("Nhập số nguyên thứ hai: "));-->
+<!--    let c = parseInt(prompt("Nhập số nguyên thứ ba: "));-->
+<!--    function min(a, b, c) {-->
+<!--        if (a<b &&a<c){-->
+<!--            return a;-->
+<!--        }else  if (b<c){-->
+<!--            return b;-->
+<!--        }else-->
+<!--            return c;-->
+<!--    }-->
+<!--    alert("Số nguyên nhỏ nhất: "+min(a,b,c));-->
+<!--</script>-->
+<!--<script>-->
+<!--    //bài 6  Viết hàm nhận vào một số, kiểm tra xem nếu số đưa vào có phải là nguyên dương không. Nếu là nguyên dương trả về true, ngược lại trả về false.-->
+<!--    let a = parseInt(prompt("Nhập 1 số bất kì: "));-->
+<!--    function kiemtraso(a) {-->
+<!--        if (a>0){-->
+<!--            return true;-->
+<!--        }else return false;-->
+<!--    }-->
+<!--    alert(kiemtraso(a));-->
+<!--</script>-->
+<!--<script>-->
+<!--    //bài 7 Viết hàm truyền vào 2 số nguyên bất kì, thực hiện đổi chỗ hai số nguyên đó.-->
+<!--    let a = parseInt(prompt("Nhập số nguyên thứ nhất: "));-->
+<!--    let b = parseInt(prompt("Nhập số nguyên thứ hai: "));-->
+<!--    function f() {-->
+<!--        let arr =[];-->
+<!--        arr[0] = a;-->
+<!--        arr[1] = b;-->
+<!--        return arr.reverse();-->
+<!--    }-->
+<!--    alert("Số đảo ngược là: "+f(a,b));-->
+<!--</script>-->
+<!--<script>-->
+<!--    //bai 8  Viết hàm truyền vào mảng số nguyên bất kỳ, sau đó đảo ngược mảng số nguyên đó-->
+<!--    let a =parseInt(prompt("Nhập số phần tử: "));-->
+<!--    function f(a) {-->
+<!--       let arr=[];-->
+<!--        for (let i=0; i<a; i++){-->
+<!--            arr[i] = parseInt(prompt("Phần thử thứ "+i));-->
+<!--        }-->
+<!--        return arr.reverse();-->
+<!--    }-->
+<!--    alert(f(a));-->
+<!--</script>-->
+<script>
+    //bài 9 Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ, kiểm tra xem ký tự bất kỳ đó có nằm trong mảng không. Nếu có trả về số lần xuất hiện của ký tự đó, nếu không trả về -1.
+    let arr = ["Phan Thanh Toan"].join();              ;
+    let search = prompt("Nhập ký tự cần tìm: ");
+    function searcharr(arr, search) {
+        let a = 0;
+        for (let i=0; i<arr.length; i++){
+            if (arr[i]===search){
+                a++;
+            }else if (i===(arr.length - 1 )&& a<=0){
+                a = -1;
+            }
+        }
+        return a;
+    }
+    alert(searcharr(arr,search));
+</script>
+</body>
+</html>
