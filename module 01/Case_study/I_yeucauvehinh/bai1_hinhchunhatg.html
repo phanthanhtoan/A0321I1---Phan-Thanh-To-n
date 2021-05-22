@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+       let a = parseInt(prompt("Nhap chieu dai a>0: "));
+       let b = parseInt(prompt("Nhap chieu rong b>0: "));
+       let result = '';
+       for (let i = 1; i <= a; i++) {
+           for (let j = 1; j <= b; j++)
+               if (i == 1 || j == 1 || i == a || j == b){
+                   result += "* "
+               }
+               else{
+                   result += "&nbsp;&nbsp;&nbsp;";
+               }
+           result += "<br>";
+       }
+       document.write(result);
+    </script>
+</body>
+</html>
