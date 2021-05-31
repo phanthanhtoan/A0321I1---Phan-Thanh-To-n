@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let tienluong = parseFloat(prompt("Nhập tiền lương: "));
+    if (tienluong <= 15000000) {
+        tienluongsauthue=  tienluong-(tienluong * 0.2);
+        alert("Tiền lương " + tienluongsauthue);
+    } else if (tienluong >= 7000000 && tienluong <= 15000000) {
+        tienluongsauthue = tienluong - (tienluong * 0.1);
+        alert("Tiền lương " + tienluongsauthue);
+    } else if (tienluong<7000000){
+        tienluongsauthue = tienluong -(tienluong*0.05);
+        alert("Tiền lương: " + tienluongsauthue);
+    }
+</script>
+</body>
+</html>

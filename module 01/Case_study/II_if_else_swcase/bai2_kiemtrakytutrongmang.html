@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //CÁCH 1
+    let arr = ['u','e','o','a','i','U','E','O','A','I'];
+    let kiemtra = prompt("Nhập kí tự cần kiểm tra: ");
+    for (let i=1; i<arr.length; i++){
+        if (kiemtra == arr[0] || kiemtra== arr[1] || kiemtra ==arr[2] || kiemtra == arr[3] || kiemtra == arr[4] || kiemtra == arr[5] ||
+            kiemtra == arr[6] || kiemtra == arr[7] || kiemtra == arr[8] || kiemtra == arr[9]){
+            alert("Từ vừa nhập là nguyên âm");
+        }else {
+            alert("Từ vừa nhập là phụ âm");
+        }
+    }
+
+</script>
+<script>
+    //CÁCH 2
+    let kiemtra = prompt("Nhập kí tự cần kiểm tra: ");
+    switch (kiemtra) {
+        case  'u':
+        case 'e':
+        case 'o':
+        case 'a':
+        case 'i':
+        case 'U':
+        case 'E':
+        case 'O':
+        case 'A':
+        case 'I':
+            alert(kiemtra + " là nguyên âm");
+            break;
+        default:
+            alert(kiemtra+" là phụ âm");
+    }
+</script>
+</body>
+</html>
