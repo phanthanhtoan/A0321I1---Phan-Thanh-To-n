@@ -8,19 +8,18 @@
 <script>
     let h = parseInt(prompt("Nhập chiều cao h>0: "));
     for (let i = 0; i < h; i++) {
-        document.write("<center>");
+        document.write("<br>");
         for (let j = 0; j <= i; j++) {
-            if (i === 0 || i === (h - 1)) {
+            if (i == 0 || i == (h-1)) {
                 document.write("*");
             } else {
-                if (j === 0 || j === i) {
+                if (j == 0 || j == i) {
                     document.write("*");
                 } else {
                     document.write("&ensp;");
                 }
             }
         }
-        document.write("</center>");
     }
 </script>
 </body>

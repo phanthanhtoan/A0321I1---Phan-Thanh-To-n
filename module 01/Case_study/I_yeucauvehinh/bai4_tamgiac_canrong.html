@@ -2,24 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Vẽ tam giác cân đặc có chiều cao h</title>
 </head>
 <body>
 <script>
-    let h = parseInt(prompt("Nhập chiều cao h>0: "));
+    let h = parseInt(prompt("Nhập chiều cao :"));
     for (let i = 0; i < h; i++) {
-        document.write("<br>");
+        document.write("<center>");
         for (let j = 0; j <= i; j++) {
-            if (i === 0 || i === (h-1)) {
+            if (i==0 || i==(h - 1)) {
                 document.write("*");
             } else {
-                if (j === 0 || j === i) {
+                if (j==0 || j==i) {
                     document.write("*");
                 } else {
                     document.write("&ensp;");
                 }
             }
         }
+        document.write("</center>");
+
     }
 </script>
 </body>
