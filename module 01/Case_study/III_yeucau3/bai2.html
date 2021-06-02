@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrA = [1,2,3];
+    let arrB = [1,2,3,4,5,6];
+    let arrC = [];
+    for (let i of arrB){
+        let check = false;
+        for (let j of arrA){
+            if(i===j){
+                check =true;
+            }
+        }
+        if (check===false){
+            arrC.push(i);
+        }
+    }
+    for (let i=0; i<arrC.length; i++){
+        let check = false;
+        for (let j =0; j<arrC.length; j++){
+            if(arrC[i]===arrC[j]&& i!=j){
+                check =true;
+            }
+        }
+        if (check === true) {
+            arrC.splice(i,1);
+        }
+    }
+   arrC.sort(function (a,b) {
+        return arrA-arrB;
+    });
+    document.write("phần tử xuất hiện trong mảng B nhưng lại không xuất hiện A = " + arrC)
+</script>
+</body>
+</html>
