@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let soPhanSo = parseInt(prompt("Nhập số phân số: "));
+    let tuSo = new Array();
+    let mauSo = new  Array();
+    let chiSo;
+    let maxFraction = 0;
+    for (let i = 0; i < soPhanSo; i++) {
+        tuSo[i] = parseFloat(prompt("Nhập tử số thứ " + (i)+ ": "));
+    }
+    for (let j = 0; j < soPhanSo; j++) {
+        mauSo[j] = parseFloat(prompt("Nhập mẫu số thứ " + (j) +": "));
+    }
+    for (let g = 0; g < soPhanSo; g++) {
+        if (tuSo[g] / mauSo[g] > maxFraction) {
+            maxFraction = (tuSo[g] / mauSo[g]);
+            chiSo = g;
+        }
+    }
+    alert("Chỉ số là: " + chiSo);
+</script>
+</body>
+</html>

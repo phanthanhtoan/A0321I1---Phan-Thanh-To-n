@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Yêu cầu 3</title>
+</head>
+<body>
+<script>
+    let number = prompt("Nhập số cần chuyển:");
+    let arr = number.split('');
+    for (let i = 0; i < arr.length; i++) {
+        switch (parseInt(arr[i])) {
+            case 0:
+                document.write('không ');
+                break;
+            case 1:
+                document.write('một ');
+                break;
+            case 2:
+                document.write('hai ');
+                break;
+            case 3:
+                document.write('ba ');
+                break;
+            case 4:
+                document.write('bốn ');
+                break;
+            case 5:
+                document.write('năm ');
+                break;
+            case 6:
+                document.write('sáu ');
+                break;
+            case 7:
+                document.write('bảy ');
+                break;
+            case 8:
+                document.write('tám ');
+                break;
+            case 9:
+                document.write('chín ');
+                break;
+            default:
+                document.write("Không hợp lệ");
+        }
+    }
+</script>
+</body>
+</html>

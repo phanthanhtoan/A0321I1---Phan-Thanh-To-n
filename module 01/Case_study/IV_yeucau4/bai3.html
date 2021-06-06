@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function commonCharacterCount(s1, s2) {
+        var count = 0;
+        s1 = s1.split('');
+        s2 = s2.split('');
+        s1.forEach(element => {
+            if (s2.includes(element)) {
+                count++;
+                s2.splice(s2.indexOf(element), 1);
+            }
+        });
+
+        return count;
+    }
+    let s1 = "aabcc";
+    let s2 ="adcaa";
+    document.write(commonCharacterCount(s1,s2));
+    // function commonCharacterCount(s1, s2) {
+    //     var count = 0;
+    //     let s3 = [];
+    //     for(var i = 0; i < s1.length; i++) {
+    //         var j = s2.indexOf(s1[i]);
+    //         if(j>=0){
+    //             s3= s2.replace(s1[i],s2);//dca//ddcaa
+    //             s2 = s2.replace(s1[i],'');
+    //         }
+    //
+    //     }
+    //     return s3;
+    // }
+    // let s1 = "aabcc";
+    // let s2 = "adcaa";
+    // document.write(commonCharacterCount(s1,s2));
+</script>
+</body>
+</html>
