@@ -45,12 +45,12 @@ public class Triangle extends Shape {
         this.side3 = side3;
     }
 
-    public double getPerimeter(){
+    public double getPerimeter() {
         return side1 + side2 + side3;
     }
 
-    public double getArea(){
-        return Math.sqrt((getPerimeter()/2)*(getPerimeter()/2 - side1)*(getPerimeter()/2 - side2)*(getPerimeter()/2 - side3));
+    public double getArea() {
+        return Math.sqrt((getPerimeter() / 2) * (getPerimeter() / 2 - side1) * (getPerimeter() / 2 - side2) * (getPerimeter() / 2 - side3));
     }
 
     @Override

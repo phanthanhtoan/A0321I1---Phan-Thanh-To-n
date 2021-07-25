@@ -6,9 +6,7 @@ public class Car {
     private String engine;
 
 
-
     public static int numberOfCars;
-
 
 
     public Car(String name, String engine) {

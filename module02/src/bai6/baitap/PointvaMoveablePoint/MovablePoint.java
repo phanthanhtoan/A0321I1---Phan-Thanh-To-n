@@ -34,13 +34,13 @@ public class MovablePoint extends Point {
         this.ySpeed = ySpeed;
     }
 
-    public void setSpeed(float xSpeed , float ySpeed){
+    public void setSpeed(float xSpeed, float ySpeed) {
         this.xSpeed = xSpeed;
         this.ySpeed = ySpeed;
     }
 
-    public float [] getSpeed(){
-        float [] test = new float[2];
+    public float[] getSpeed() {
+        float[] test = new float[2];
         test[0] = this.xSpeed;
         test[1] = this.ySpeed;
         return test;
@@ -48,10 +48,10 @@ public class MovablePoint extends Point {
 
     @Override
     public String toString() {
-        return   "("+ super.toString() + " , xSpeed = " + getxSpeed() + " , ySpeed = " + getySpeed() + ")";
+        return "(" + super.toString() + " , xSpeed = " + getxSpeed() + " , ySpeed = " + getySpeed() + ")";
     }
 
-    public MovablePoint move(){
+    public MovablePoint move() {
         setX(getX() + getxSpeed());
         setY(getY() + getySpeed());
         return this;

@@ -5,7 +5,7 @@ public class TestCircle {
         Circle c = new Circle();
         System.out.println(c.getArea());
 
-        Circle c1 = new Circle(6 , "Red");
+        Circle c1 = new Circle(6, "Red");
         System.out.println(c1);
     }
 }

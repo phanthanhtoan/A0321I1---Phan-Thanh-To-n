@@ -1,6 +1,6 @@
 package bai6.thuchanh;
 
-public class Square extends Shape{
+public class Square extends Shape {
     private double side;
 
     public Square() {
