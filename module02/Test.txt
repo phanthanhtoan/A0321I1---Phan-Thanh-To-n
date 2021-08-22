@@ -1,0 +1,1 @@
+Product{nameProduct='Toan', price=20000, description='abc'}
