@@ -1,6 +1,8 @@
 package casestudy.models;
 
-public abstract class Person {
+import java.io.Serializable;
+
+public abstract class Person implements Serializable {
     private int id;
     private String name;
     private int age;

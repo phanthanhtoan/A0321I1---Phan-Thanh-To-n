@@ -1,5 +1,13 @@
 package casestudy.controllers;
 
+import casestudy.models.Booking;
+import casestudy.services.CustomerService;
+import casestudy.services.FacilityService;
+import casestudy.services.Impl.BookingServiceImpl;
+import casestudy.services.Impl.CustomerServiceImpl;
+import casestudy.services.Impl.EmloyeeServiceImpl;
+import casestudy.services.Impl.FacilityServiceImpl;
+
 import java.util.Scanner;
 
 public class FuramaController {
@@ -42,6 +50,7 @@ public class FuramaController {
     }
 
     public static void MenuEmployee() {
+        EmloyeeServiceImpl emloyeeService = new EmloyeeServiceImpl();
         boolean check = true;
         while (check) {
             System.out.println("1. Display list employees");
@@ -52,13 +61,13 @@ public class FuramaController {
             Scanner scanner = new Scanner(System.in);
             switch (scanner.nextInt()) {
                 case 1:
-                    System.out.println("1");
+                    emloyeeService.disPlay();
                     break;
                 case 2:
-                    System.out.println("2");
+                    emloyeeService.addNew();
                     break;
                 case 3:
-                    System.out.println("3");
+                    emloyeeService.edit();
                     break;
                 case 4:
                     displayMainMenu();
@@ -68,6 +77,7 @@ public class FuramaController {
     }
 
     public static void MenuCustomer() {
+        CustomerServiceImpl customerService = new CustomerServiceImpl();
         boolean check = true;
         while (check) {
             System.out.println("1. Display list customers");
@@ -78,10 +88,10 @@ public class FuramaController {
             Scanner scanner = new Scanner(System.in);
             switch (scanner.nextInt()) {
                 case 1:
-                    System.out.println("1");
+                    customerService.disPlay();
                     break;
                 case 2:
-                    System.out.println("2");
+                    customerService.addNew();
                     break;
                 case 3:
                     System.out.println("3");
@@ -94,20 +104,21 @@ public class FuramaController {
     }
 
     public static void MenuFacility() {
+        FacilityServiceImpl facilityService = new FacilityServiceImpl();
         boolean check = true;
         while (check) {
             System.out.println("1. Display list facility");
-            System.out.println("2. Add new facility");
+            System.out.println("2. Add new  Facility");
             System.out.println("3. Display list facility maintenance");
             System.out.println("4. Return main menu");
             System.out.print("Enter your choice MenuFacility: ");
             Scanner scanner = new Scanner(System.in);
             switch (scanner.nextInt()) {
                 case 1:
-                    System.out.println("1");
+                    facilityService.display();
                     break;
                 case 2:
-                    System.out.println("2");
+                    facilityService.addNewVilla();
                     break;
                 case 3:
                     System.out.println("3");
@@ -119,7 +130,26 @@ public class FuramaController {
         }
     }
 
+    public static void addNewMenuFacility() {
+        FacilityServiceImpl facilityService = new FacilityServiceImpl();
+        boolean check = true;
+        while (check) {
+            System.out.println("1.  Add new Villa");
+            System.out.println("2. Add new  House ");
+            System.out.println("3. Add new  Room ");
+            System.out.println("4. Return main menu");
+            System.out.print("Enter your choice MenuFacility: ");
+            Scanner scanner = new Scanner(System.in);
+            switch (scanner.nextInt()) {
+                case 1:
+                    facilityService.display();
+                    MenuFacility();
+                    break;
+            }
+        }
+    }
     public static void MenuBooking() {
+        BookingServiceImpl bookingService = new BookingServiceImpl();
         boolean check = true;
         while (check) {
             System.out.println("1. Add new booking");
@@ -132,10 +162,10 @@ public class FuramaController {
             Scanner scanner = new Scanner(System.in);
             switch (scanner.nextInt()) {
                 case 1:
-                    System.out.println("1");
+                    bookingService.addBooking();
                     break;
                 case 2:
-                    System.out.println("2");
+                    bookingService.disPlayListBooking();
                     break;
                 case 3:
                     System.out.println("3");

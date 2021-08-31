@@ -1,29 +1,18 @@
 package casestudy.models;
 
 public class Customer extends Person{
-    private int idCustomer;
     private String typeCustomer;
 
     public Customer() {
     }
 
-    public Customer(int idCustomer, String typeCustomer) {
-        this.idCustomer = idCustomer;
+    public Customer( String typeCustomer) {
         this.typeCustomer = typeCustomer;
     }
 
-    public Customer(int id, String name, int age, String address, String gender, int phoneNumber, String email, int idCustomer, String typeCustomer) {
+    public Customer(int id, String name, int age, String address, String gender, int phoneNumber, String email, String typeCustomer) {
         super(id, name, age, address, gender, phoneNumber, email);
-        this.idCustomer = idCustomer;
         this.typeCustomer = typeCustomer;
-    }
-
-    public int getIdCustomer() {
-        return idCustomer;
-    }
-
-    public void setIdCustomer(int idCustomer) {
-        this.idCustomer = idCustomer;
     }
 
     public String getTypeCustomer() {
@@ -32,5 +21,12 @@ public class Customer extends Person{
 
     public void setTypeCustomer(String typeCustomer) {
         this.typeCustomer = typeCustomer;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString()+ "Customer{" +
+                "typeCustomer='" + typeCustomer + '\'' +
+                '}';
     }
 }
