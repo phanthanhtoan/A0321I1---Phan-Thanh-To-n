@@ -1,5 +1,7 @@
 package casestudy.data;
 
+import bai16.Optional.Docfile_csv.Country;
+
 import java.io.*;
 import java.util.Collection;
 
@@ -19,6 +21,7 @@ public class ReadAndWrite {
         try {
             fileOutputStream = new FileOutputStream(path);
             objectOutputStream = new ObjectOutputStream(fileOutputStream);
+
             objectOutputStream.writeObject(collection);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -27,6 +30,7 @@ public class ReadAndWrite {
         } finally {
             try {
                 fileOutputStream.close();
+                objectOutputStream.close();
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -53,4 +57,5 @@ public class ReadAndWrite {
         }
         return null;
     }
+
 }

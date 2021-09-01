@@ -3,10 +3,7 @@ package casestudy.controllers;
 import casestudy.models.Booking;
 import casestudy.services.CustomerService;
 import casestudy.services.FacilityService;
-import casestudy.services.Impl.BookingServiceImpl;
-import casestudy.services.Impl.CustomerServiceImpl;
-import casestudy.services.Impl.EmloyeeServiceImpl;
-import casestudy.services.Impl.FacilityServiceImpl;
+import casestudy.services.Impl.*;
 
 import java.util.Scanner;
 
@@ -16,42 +13,51 @@ public class FuramaController {
     }
 
     public static void displayMainMenu() {
-        System.out.println("---MENU---");
-        System.out.println("1. Employee Management");
-        System.out.println("2. Customer Management");
-        System.out.println("3. Facility Management ");
-        System.out.println("4. Booking Managerment");
-        System.out.println("5. Promotion Management");
-        System.out.println("6. Exit");
-        System.out.print("Enter your choice: ");
-        Scanner scanner = new Scanner(System.in);
-        switch (scanner.nextInt()) {
-            case 1:
-                MenuEmployee();
-                break;
-            case 2:
-                MenuCustomer();
-                break;
-            case 3:
-                MenuFacility();
-                break;
-            case 4:
-                MenuBooking();
-                break;
-            case 5:
-                MenuPromotion();
-                break;
-            case 6:
-                System.out.println("Exit");
-                System.exit(0);
-            default:
-                System.out.println("No choice !");
+        boolean check = true;
+        int choice = 0;
+        while (check) {
+            System.out.println("---MENU---");
+            System.out.println("1. Employee Management");
+            System.out.println("2. Customer Management");
+            System.out.println("3. Facility Management ");
+            System.out.println("4. Booking Managerment");
+            System.out.println("5. Promotion Management");
+            System.out.println("6. Exit");
+            System.out.print("Enter your choice: ");
+            Scanner scanner = new Scanner(System.in);
+            try {
+                choice = Integer.parseInt(scanner.nextLine());
+            } catch (NumberFormatException e) {
+                System.out.println("Ban da nhap sai dinh dang, vui long nhapp lai: ");
+            }
+            switch (choice) {
+                case 1:
+                    MenuEmployee();
+                    break;
+                case 2:
+                    MenuCustomer();
+                    break;
+                case 3:
+                    MenuFacility();
+                    break;
+                case 4:
+                    MenuBooking();
+                    break;
+                case 5:
+                    MenuPromotion();
+                    break;
+                case 6:
+                    System.out.println("Exit");
+                    System.exit(0);
+                    break;
+            }
         }
     }
 
     public static void MenuEmployee() {
         EmloyeeServiceImpl emloyeeService = new EmloyeeServiceImpl();
         boolean check = true;
+        int choice = 0;
         while (check) {
             System.out.println("1. Display list employees");
             System.out.println("2. Add new employee");
@@ -59,7 +65,12 @@ public class FuramaController {
             System.out.println("4. Return main menu");
             System.out.print("Enter your choice MenuEmployee: ");
             Scanner scanner = new Scanner(System.in);
-            switch (scanner.nextInt()) {
+            try {
+                choice = Integer.parseInt(scanner.nextLine());
+            } catch (NumberFormatException e) {
+                System.out.println("Ban da nhap sai dinh dang, vui long nhapp lai: ");
+            }
+            switch (choice) {
                 case 1:
                     emloyeeService.disPlay();
                     break;
@@ -106,6 +117,7 @@ public class FuramaController {
     public static void MenuFacility() {
         FacilityServiceImpl facilityService = new FacilityServiceImpl();
         boolean check = true;
+        int choice = 0;
         while (check) {
             System.out.println("1. Display list facility");
             System.out.println("2. Add new  Facility");
@@ -113,7 +125,12 @@ public class FuramaController {
             System.out.println("4. Return main menu");
             System.out.print("Enter your choice MenuFacility: ");
             Scanner scanner = new Scanner(System.in);
-            switch (scanner.nextInt()) {
+            try {
+                choice = Integer.parseInt(scanner.nextLine());
+            } catch (NumberFormatException e) {
+                System.out.println("Ban da nhap sai dinh dang, vui long nhapp lai: ");
+            }
+            switch (choice) {
                 case 1:
                     facilityService.display();
                     break;
@@ -133,6 +150,7 @@ public class FuramaController {
     public static void addNewMenuFacility() {
         FacilityServiceImpl facilityService = new FacilityServiceImpl();
         boolean check = true;
+        int choice = 0;
         while (check) {
             System.out.println("1.  Add new Villa");
             System.out.println("2. Add new  House ");
@@ -140,7 +158,12 @@ public class FuramaController {
             System.out.println("4. Return main menu");
             System.out.print("Enter your choice MenuFacility: ");
             Scanner scanner = new Scanner(System.in);
-            switch (scanner.nextInt()) {
+            try {
+                choice = Integer.parseInt(scanner.nextLine());
+            } catch (NumberFormatException e) {
+                System.out.println("Ban da nhap sai dinh dang, vui long nhapp lai: ");
+            }
+            switch (choice) {
                 case 1:
                     facilityService.display();
                     MenuFacility();
@@ -148,9 +171,12 @@ public class FuramaController {
             }
         }
     }
+
     public static void MenuBooking() {
         BookingServiceImpl bookingService = new BookingServiceImpl();
+        ContractServiceImpl contractService = new ContractServiceImpl();
         boolean check = true;
+        int choice = 0;
         while (check) {
             System.out.println("1. Add new booking");
             System.out.println("2. Display list booking");
@@ -160,7 +186,12 @@ public class FuramaController {
             System.out.println("6. Return main menu");
             System.out.print("Enter your choice: MenuBooking ");
             Scanner scanner = new Scanner(System.in);
-            switch (scanner.nextInt()) {
+            try {
+                choice = Integer.parseInt(scanner.nextLine());
+            } catch (NumberFormatException e) {
+                System.out.println("Ban da nhap sai dinh dang, vui long nhapp lai: ");
+            }
+            switch (choice) {
                 case 1:
                     bookingService.addBooking();
                     break;
@@ -168,10 +199,10 @@ public class FuramaController {
                     bookingService.disPlayListBooking();
                     break;
                 case 3:
-                    System.out.println("3");
+                    contractService.addNewContracts();
                     break;
                 case 4:
-                    System.out.println("4");
+                    contractService.displayListContracts();
                     break;
                 case 5:
                     System.out.println("5");
@@ -184,18 +215,26 @@ public class FuramaController {
     }
 
     public static void MenuPromotion() {
+        PromotionServiceImpl promotionService = new PromotionServiceImpl();
         boolean check = true;
+        int choice = 0;
         while (check) {
             System.out.println("1. Display list customers use service");
             System.out.println("2. Display list customers get voucher");
             System.out.println("3. Return main menu");
             System.out.print("Enter your choice MenuPromotion: ");
             Scanner scanner = new Scanner(System.in);
-            switch (scanner.nextInt()) {
+            try {
+                choice = Integer.parseInt(scanner.nextLine());
+            } catch (NumberFormatException e) {
+                System.out.println("Ban da nhap sai dinh dang, vui long nhapp lai: ");
+            }
+            switch (choice) {
                 case 1:
-                    System.out.println("1");
+                    promotionService.displayListCustomersUseService();
                     break;
                 case 2:
+                    promotionService.displayListCustomersGetVoucher();
                     System.out.println("2");
                     break;
                 case 3:

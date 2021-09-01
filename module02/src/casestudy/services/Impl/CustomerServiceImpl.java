@@ -14,6 +14,7 @@ public class CustomerServiceImpl implements CustomerService {
     private static Scanner scanner = new Scanner(System.in);
     @Override
     public void disPlay() {
+        customersList = (List<Customer>) ReadAndWrite.readFile("E:\\A0321I1 - Phan Thanh Toan\\A0321I1---Phan-Thanh-Toan\\module02\\src\\casestudy\\data\\customer.csv");
         for (Customer customer: customersList){
             System.out.println(customer.toString());
         }
@@ -22,23 +23,26 @@ public class CustomerServiceImpl implements CustomerService {
     @Override
     public void addNew() {
         System.out.println("Nhap id: ");
-        int id = scanner.nextInt();
+        int id = Integer.parseInt(scanner.nextLine());
         System.out.println("Nhap ten: ");
-        String name = scanner.next();
+        String name = scanner.nextLine();
         System.out.println("Nhap tuoi: ");
-        int age = scanner.nextInt();
+        int age = Integer.parseInt(scanner.nextLine());
         System.out.println("Nhap dia chi: ");
-        String address = scanner.next();
+        String address = scanner.nextLine();
         System.out.println("Gioi tinh: ");
-        String gender = scanner.next();
+        String gender = scanner.nextLine();
         System.out.println("Nhap SDT: ");
-        int phoneNumber = scanner.nextInt();
+        int phoneNumber = Integer.parseInt(scanner.nextLine());
         System.out.println("Nhap Email: ");
-        String email = scanner.next();
+        String email = scanner.nextLine();
         System.out.println("Nhap loai khach hang: ");
-        String typeCustomer = scanner.next();
+        String typeCustomer = scanner.nextLine();
+
         Customer customer = new Customer(id, name, age, address, gender, phoneNumber, email, typeCustomer);
         customersList.add(customer);
+
+        ReadAndWrite.writeFile(customersList, "E:\\A0321I1 - Phan Thanh Toan\\A0321I1---Phan-Thanh-Toan\\module02\\src\\casestudy\\data\\customer.csv");
     }
 
     @Override

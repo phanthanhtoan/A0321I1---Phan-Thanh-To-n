@@ -1,61 +1,60 @@
-//package casestudy.models;
-//
-//import java.time.LocalDate;
-//
-//public class Contract  extends Booking{
-//    private double moneyPaid;
-//    private double totalMoney;
-//
-//    public Contract() {
-//    }
-//
-//    public Contract( double moneyPaid, double totalMoney) {
-//        this.moneyPaid = moneyPaid;
-//        this.totalMoney = totalMoney;
-//    }
-//
-//    public Contract(LocalDate arrivalDate, LocalDate lastDay, double moneyPaid, double totalMoney) {
-//        super( arrivalDate, lastDay);
-//        this.moneyPaid = moneyPaid;
-//        this.totalMoney = totalMoney;
-//    }
-//
-//    public Contract(int id, String service, double usedArea, double rentPrice, String rentType, int idBooking, LocalDate arrivalDate, LocalDate lastDay, int idCustomer, int idContract, double moneyPaid, double totalMoney) {
-//        super(id, service, usedArea, rentPrice, rentType, idBooking, arrivalDate, lastDay, idCustomer);
-//        this.moneyPaid = moneyPaid;
-//        this.totalMoney = totalMoney;
-//    }
-//
-//    public int getIdContract() {
-//        return idContract;
-//    }
-//
-//    public void setIdContract(int idContract) {
-//        this.idContract = idContract;
-//    }
-//
-//    public double getMoneyPaid() {
-//        return moneyPaid;
-//    }
-//
-//    public void setMoneyPaid(double moneyPaid) {
-//        this.moneyPaid = moneyPaid;
-//    }
-//
-//    public double getTotalMoney() {
-//        return totalMoney;
-//    }
-//
-//    public void setTotalMoney(double totalMoney) {
-//        this.totalMoney = totalMoney;
-//    }
-//
-//    @Override
-//    public String toString() {
-//        return "Contract{" +
-//                "idContract=" + idContract +
-//                ", moneyPaid=" + moneyPaid +
-//                ", totalMoney=" + totalMoney +
-//                '}';
-//    }
-//}
+package casestudy.models;
+
+public class Contract {
+    private Booking booking;
+    private int contractCode;
+    private int  moneyPaid;
+    private int  totalMoney;
+
+    public Contract() {
+    }
+
+    public Contract(Booking booking, int contractCode, int moneyPaid, int totalMoney) {
+        this.booking = booking;
+        this.contractCode = contractCode;
+        this.moneyPaid = moneyPaid;
+        this.totalMoney = totalMoney;
+    }
+
+    public Booking getBooking() {
+        return booking;
+    }
+
+    public void setBooking(Booking booking) {
+        this.booking = booking;
+    }
+
+    public int getContractCode() {
+        return contractCode;
+    }
+
+    public void setContractCode(int contractCode) {
+        this.contractCode = contractCode;
+    }
+
+    public int getMoneyPaid() {
+        return moneyPaid;
+    }
+
+    public void setMoneyPaid(int moneyPaid) {
+        this.moneyPaid = moneyPaid;
+    }
+
+    public int getTotalMoney() {
+        return totalMoney;
+    }
+
+    public void setTotalMoney(int totalMoney) {
+        this.totalMoney = totalMoney;
+    }
+
+    @Override
+    public String toString() {
+        return "Contract{" +
+                "booking=" + booking +
+                ", contractCode=" + contractCode +
+                ", moneyPaid=" + moneyPaid +
+                ", totalMoney=" + totalMoney +
+                '}';
+    }
+}
