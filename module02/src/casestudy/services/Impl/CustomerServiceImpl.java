@@ -10,12 +10,21 @@ import java.util.List;
 import java.util.Scanner;
 
 public class CustomerServiceImpl implements CustomerService {
-    private static List<Customer> customersList= new LinkedList<>();
+    private static List<Customer> customersList = new LinkedList<>();
     private static Scanner scanner = new Scanner(System.in);
+
+    public Customer isCustomer(int customerCode) {
+        for (Customer customer : customersList) {
+            if (customer.getId() == customerCode) {
+                return customer;
+            }
+        }
+        return null;
+    }
     @Override
     public void disPlay() {
         customersList = (List<Customer>) ReadAndWrite.readFile("E:\\A0321I1 - Phan Thanh Toan\\A0321I1---Phan-Thanh-Toan\\module02\\src\\casestudy\\data\\customer.csv");
-        for (Customer customer: customersList){
+        for (Customer customer : customersList) {
             System.out.println(customer.toString());
         }
     }
@@ -52,6 +61,16 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public void delete() {
-
+        System.out.println("Nhap id khach hang can xoa: ");
+        int idCustomer = 0;
+        try {
+            idCustomer = Integer.parseInt(scanner.nextLine());
+        } catch (NumberFormatException e) {
+            System.out.println("Sai id nhan vien, nhap lai: ");
+        }
+        Customer customer = isCustomer(idCustomer);
+        customersList.remove(customer);
+        ReadAndWrite.writeFile(customersList, "E:\\A0321I1 - Phan Thanh Toan\\A0321I1---Phan-Thanh-Toan\\module02\\src\\casestudy\\data\\customer.csv");
+        System.out.println("Xoa thanh cong");
     }
 }

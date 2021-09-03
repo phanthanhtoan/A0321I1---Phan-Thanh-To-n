@@ -62,7 +62,8 @@ public class FuramaController {
             System.out.println("1. Display list employees");
             System.out.println("2. Add new employee");
             System.out.println("3. Edit employee");
-            System.out.println("4. Return main menu");
+            System.out.println("4. Delete employee");
+            System.out.println("5. Return main menu");
             System.out.print("Enter your choice MenuEmployee: ");
             Scanner scanner = new Scanner(System.in);
             try {
@@ -81,6 +82,9 @@ public class FuramaController {
                     emloyeeService.edit();
                     break;
                 case 4:
+                    emloyeeService.delete();
+                    break;
+                case 5:
                     displayMainMenu();
                     break;
             }
@@ -94,7 +98,8 @@ public class FuramaController {
             System.out.println("1. Display list customers");
             System.out.println("2. Add new customer");
             System.out.println("3. Edit customer");
-            System.out.println("4. Return main menu");
+            System.out.println("4. Delete customer");
+            System.out.println("5. Return main menu");
             System.out.print("Enter your choice MenuCustomer: ");
             Scanner scanner = new Scanner(System.in);
             switch (scanner.nextInt()) {
@@ -108,6 +113,9 @@ public class FuramaController {
                     System.out.println("3");
                     break;
                 case 4:
+                    customerService.delete();
+                    break;
+                case 5:
                     displayMainMenu();
                     break;
             }

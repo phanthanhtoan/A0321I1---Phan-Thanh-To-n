@@ -212,6 +212,16 @@ public class EmloyeeServiceImpl implements EmployeeService {
 
     @Override
     public void delete() {
-
+        System.out.println("Nhap id nhan vien can xoa: ");
+        int idEmployee = 0;
+        try {
+            idEmployee = Integer.parseInt(scanner.nextLine());
+        } catch (NumberFormatException e) {
+            System.out.println("Sai id nhan vien, nhap lai: ");
+        }
+        Employee employee = isEmployee(idEmployee);
+        employeeList.remove(employee);
+        ReadAndWrite.writeFile(employeeList, "src\\casestudy\\data\\employee.csv");
+        System.out.println("Xoa thanh cong");
     }
 }

@@ -1,12 +1,10 @@
-package casestudy.data;
-
-import bai16.Optional.Docfile_csv.Country;
+package Thi_HoSoBenhAn;
 
 import java.io.*;
 import java.util.Collection;
 
 public class ReadAndWrite {
-   public static void writeFile(Collection collection, String path) {
+    public static void writeFile(Collection collection, String path) {
         File file = new File(path);
         if (!file.exists()) {
             try {
@@ -57,5 +55,4 @@ public class ReadAndWrite {
         }
         return null;
     }
-
 }
