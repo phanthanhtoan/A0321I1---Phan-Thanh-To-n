@@ -1,0 +1,46 @@
+.title{
+    position: relative;
+    font-weight: 900;
+    border-bottom : 1px solid #333;
+
+}
+
+body,h1 {
+    margin:0px !important ;
+    padding:0px !important
+}
+
+.dong1, .dong2, .dong3{
+    text-indent: 30px;
+}
+
+.canle{
+    max-width: 600px;
+    text-align: justify;
+    font-size:  16px;
+}
+.bold{
+    font-weight: bold;
+}
+/*.title:after{*/
+/*    position: absolute;*/
+/*    bottom: 0px;*/
+/*    display: block;*/
+/*    margin: 0px;*/
+/*    background-color: #333;*/
+/*    height: 2px;*/
+/*}*/
+/*.tile_hr{*/
+/*    display: flex;*/
+/*    margin: -15px;*/
+/*    padding: -10px;*/
+/*}*/
+
+.text_blue{
+    color: blue;
+}
+
+.spacing{
+    color: red;
+}
+

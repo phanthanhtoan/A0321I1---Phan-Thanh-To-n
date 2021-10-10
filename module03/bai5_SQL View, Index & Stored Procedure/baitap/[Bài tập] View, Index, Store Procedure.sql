@@ -66,7 +66,6 @@ begin
 	insert into products values (id,productCode,productName,productPrice,productAmount,productDescription,productStatus);
 end $$
 DELIMITER ;
-
 call add_product(6,'N_01','Nokia_Shiba',6999494,3,'Full Box','No Hope');
 call add_product(7,'Oppo_02','Oppo_A03S',751100,3,'Full Box','Good');
 
