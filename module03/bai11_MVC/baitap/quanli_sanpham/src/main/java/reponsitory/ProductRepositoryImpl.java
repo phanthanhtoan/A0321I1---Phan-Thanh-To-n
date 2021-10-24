@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class ProductReponsitoryImpl implements ProductReponsitory{
+public class ProductRepositoryImpl implements IProductRepository {
 
     private static Map<Integer, Product> products;
 

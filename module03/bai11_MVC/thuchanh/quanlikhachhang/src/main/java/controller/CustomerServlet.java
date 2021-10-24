@@ -14,6 +14,7 @@ import java.util.List;
 
 @WebServlet(name = "CustomerServlet", urlPatterns = "/customers")
 public class CustomerServlet extends HttpServlet {
+
     private CustomerServiceImpl customerService = new CustomerServiceImpl();
 
     protected void doPost(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws ServletException, IOException {
